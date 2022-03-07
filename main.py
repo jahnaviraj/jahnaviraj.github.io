@@ -17,16 +17,14 @@ def home():
         email = request.form["email"]
         subject = request.form["subject"]
         message = request.form["message"]
-        admin_email = os.getenv('contact_email')
-        admin_password = os.getenv('contact_password')
-        with smtplib.SMTP('smtp.gmail.com', 587) as conn:
-            conn.ehlo()
-            conn.starttls()
-            conn.login(admin_email, admin_password)
-            conn.sendmail(admin_email , "jahnaviraj25@gmail.com", f'Subject: {subject} \n\n{message}\n\n-{name}\n{email}')
-            conn.quit()
+        # with smtplib.SMTP('smtp.gmail.com', 587) as conn:
+        #     conn.ehlo()
+        #     conn.starttls()
+        #     conn.login(os.getenv('contact_email'), os.getenv('contact_password'))
+        #     conn.sendmail(os.getenv('contact_email') , os.getenv('send_to_email'), f'Subject: {subject} \n\n{message}\n\n-{name}\n{email}')
+        #     conn.quit()
 
-            flash("Your message was successfully sent. Thankyou!")
+        #     flash("Your message was successfully sent. Thankyou!")
 
     return render_template('index.html')
 
