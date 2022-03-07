@@ -1,6 +1,5 @@
 ###FLASK APP FOR PORTFOLIO WEBSITE##
  
-from re import sub
 from flask import Flask, render_template, request, flash
 import smtplib, os
 from dotenv import load_dotenv
