@@ -20,7 +20,6 @@ def home():
         message = request.form["message"]
         admin_email = os.getenv('contact_email')
         admin_password = os.getenv('contact_password')
-        print(name,email,subject,message,admin_email,admin_password)
         with smtplib.SMTP('smtp.gmail.com', 587) as conn:
             conn.ehlo()
             conn.starttls()
