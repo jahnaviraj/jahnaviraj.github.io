@@ -14,8 +14,5 @@ app.config['SECRET_KEY'] = os.getenv('secret_key')
 def home():
     return render_template('index.html')
 
-
-
-
 if __name__ == "__main__":
     app.run(debug=True)
